@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Formato-AsigFamiliar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Formato / Asignacion Familiar</h1>
+
+        <div class="ingreso-name">
+            <label for="name">Nombre:</label>
+            <input id="name" type="text" placeholder="Ej: Juan">
+        </div>
+        <div class="ingreso-lastnames">
+            <label for="lastnames">Apellido:</label>
+            <input id="lastnames" type="text" placeholder="Ej: Pérez Gómez">
+        </div>
+        
+        <div id="resuMayuscula"></div>
+        <button type="button" onclick="convertirMayuscula()">Mayuscula Nombre/Apellido</button>
+        <button type="button" onclick="limpiar()">Limpiar campos</button>
+        
+        <hr>
+
+        <div>
+            <label for="sueldoBase">Sueldo Base Actual ($):</label>
+            <input id="sueldoBase" type="number" placeholder="Ej: 600000">
+        </div>
+        
+        <br>
+        
+        <div>
+            <label for="rentaAnterior">Renta Semestre Anterior ($):</label>
+            <input id="rentaAnterior" type="number" placeholder="Ej: 500000">
+        </div>
+        
+        <br>
+        
+        <div>
+            <label for="tieneCargas">¿Tiene cargas familiares?:</label>
+            <select id="tieneCargas" onchange="evaluarCargas()">
+                <option value="no">No</option>
+                <option value="si">Sí</option>
+            </select>
+        </div>
+
+        <br>
+        
+        <div>
+            <label for="cantCargas">Cantidad de Cargas:</label>
+            <input id="cantCargas" type="number" value="0" min="0" disabled>
+        </div>
+
+        <button type="button" onclick="calcularAsignacion()">Calcular Asignación</button>
+
+        <div id="resuAsig"></div>
+
+        <h2>Resumen Persona</h2>
+        <div id="resuPersona"></div>
+
+        <script src="Act4.js"></script>
+
+    </body>
+</html>
