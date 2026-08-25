@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Arreglo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Arreglo</h1>
+
+        <div class="ingreso-n">
+            <label for="num">Numero:</label>
+            <input id="num" type="number">
+        </div>
+
+        <button type="button" onclick="generarArreglo()">Generar arreglo</button>
+        <div id="resuArreglo"></div>
+        
+        <hr>
+
+        <div class="ingreso-arreglo">
+            <label for="inputArreglo">Ingrese números separados por coma:</label>
+            <input id="inputArreglo" type="text" placeholder="Ejemplo: 10, 45, 2, 8">
+        </div>
+
+        <br><br>
+
+        <button type="button" onclick="obtenerMayor()">Obtener Mayor</button>
+        <div id="resuMax"></div>
+
+        <br><br>
+
+        <button type="button" onclick="ordenarAsc()">Ordenar Ascendente</button>
+        <div id="resuOrden"></div>
+        
+        <br><br>
+
+        <div class="busqueda">
+            <input id="numBuscado" type="number" placeholder="Número a buscar">
+            <button type="button" onclick="buscar()">Buscar Número</button>
+        </div>
+        <div id="resuBusqueda"></div>
+
+        <hr>
+
+        <div class="busquedaDia">
+            <input id="diaBuscado" type="number" placeholder="Dia a buscar">
+            <button type="button" onclick="obtenerDiaSemana()">Obtener Dia Semana</button>
+        </div>
+        <div id="resuDia"></div>
+
+        <script src="Act3_arreglos.js"></script>
+    </body>
+</html>
